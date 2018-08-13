@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">LocalLend</string>
+  <string name="title">For all your borrowing needs</string>
+  <string name="borrow">Borrow</string>
+  <string name="lend">Lend</string>
+  <string name="addItem">Add Item</string>
+  <string name="contactLender">Contact Lender</string>
+</resources>
