@@ -34,7 +34,9 @@ namespace MobileAppCA
 
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
-            //Add to BorrowList
+            //Intent addToBorrowList = new Intent(this, typeof(BorrowListActivity));
+            //addToBorrowList.PutExtra("txtName", txtEditItemName.Text);
+            //StartActivityForResult(addToBorrowList, 100);
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)

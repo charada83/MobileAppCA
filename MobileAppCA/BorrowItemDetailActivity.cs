@@ -5,10 +5,12 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.IO;
 
 namespace MobileAppCA
 {
@@ -16,8 +18,8 @@ namespace MobileAppCA
     public class BorrowItemDetailActivity : Activity
     {
         ImageView imgItemPhoto;
-        TextView txtItemName;
-        TextView txtItemDescription;
+        TextView lblItemName;
+        TextView lblItemDescription;
         Button btnContactLender;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,9 +30,24 @@ namespace MobileAppCA
             // Create your application here
 
             imgItemPhoto = FindViewById<ImageView>(Resource.Id.imgItemPhoto);
-            txtItemName = FindViewById<TextView>(Resource.Id.lblItemName);
-            txtItemDescription = FindViewById<TextView>(Resource.Id.lblItemDescription);
+            lblItemName = FindViewById<TextView>(Resource.Id.lblItemName);
+            lblItemDescription = FindViewById<TextView>(Resource.Id.lblItemDescription);
             btnContactLender = FindViewById<Button>(Resource.Id.btnContactLender);
+
+            string itemName = Intent.GetStringExtra("itemName");
+            string itemDesc = Intent.GetStringExtra("itemDescription");
+            int itemImage = Intent.GetIntExtra("itemImage", 0);
+
+            lblItemName.Text = itemName.ToString();
+            lblItemDescription.Text = itemDesc.ToString();
+            imgItemPhoto.SetImageResource(itemImage);
+
+            btnContactLender.Click += BtnContactLender_Click;
+        }
+
+        private void BtnContactLender_Click(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
         }
     }
 }

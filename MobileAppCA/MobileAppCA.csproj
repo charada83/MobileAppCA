@@ -94,7 +94,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\BorrowLendButtonStyles.xml" />
+    <AndroidResource Include="Resources\drawable\borrowlendbuttonstyles.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\powerdrill.jpg" />
@@ -109,6 +109,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\BorrowItemDetail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ContactDialog.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

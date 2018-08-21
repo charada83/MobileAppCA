@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace MobileAppCA
 {
-    [Activity(Label = "BorrowListActivity")]
+    [Activity(Label = "Borrow")]
     public class BorrowListActivity : Activity
     {
         private ItemAdapter itemAdapter;
@@ -36,16 +36,19 @@ namespace MobileAppCA
             itemAdapter = new ItemAdapter(this, itemList);
             lvItems.Adapter = itemAdapter;
 
-            lvItems.Click += LvItems_Click;
+            lvItems.ItemClick += LvItems_ItemClick;
         }
 
-        private void LvItems_Click(object sender, EventArgs e)
+        private void LvItems_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            //var itemClickPosition = e.Position;
-            //var item = itemList[itemClickPosition] as Item;
-            //Intent getKeyword = new Intent(this, typeof());
-            //getKeyword.PutExtra("itemName", item.ItemName.ToString());
-            //StartActivity(getKeyword);
+            var itemClickPosition = e.Position;
+            var item = itemList[itemClickPosition] as Item;
+            Intent getItem = new Intent(this, typeof(BorrowItemDetailActivity));
+            getItem.PutExtra("itemName", item.ItemName.ToString());
+            getItem.PutExtra("itemDescription", item.ItemDescription.ToString());
+            getItem.PutExtra("itemImage", item.ImageDrawableID);
+
+            StartActivity(getItem);
         }
 
         private void TxtSearch_TextChanged(object sender, Android.Text.TextChangedEventArgs e)

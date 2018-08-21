@@ -5,7 +5,7 @@ using Android.Content;
 
 namespace MobileAppCA
 {
-    [Activity(Label = "MobileAppCA", MainLauncher = true)]
+    [Activity(Label = "LocalLend", MainLauncher = true)]
     public class MainActivity : Activity
     {
         TextView lblTitle;
