@@ -56,7 +56,8 @@
   <ItemGroup>
     <Compile Include="BorrowItemDetailActivity.cs" />
     <Compile Include="BorrowListActivity.cs" />
-    <Compile Include="DialogLend.cs" />
+    <Compile Include="ContactDialog.cs" />
+    <Compile Include="LendDialog.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemAdapter.cs" />
     <Compile Include="ItemAdapterViewHolder.cs" />
@@ -116,6 +117,9 @@
     <AndroidResource Include="Resources\layout\ContactDialog.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\uploadimagedefault.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

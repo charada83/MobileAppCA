@@ -6,4 +6,7 @@
   <string name="lend">Lend</string>
   <string name="addItem">Add Item</string>
   <string name="contactLender">Contact Lender</string>
+  <string name="sendMessage">Send Message</string>
+  <string name="cancel">Cancel</string>
+  <string name="backToList">Back To List</string>
 </resources>

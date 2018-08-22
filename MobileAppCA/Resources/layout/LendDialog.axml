@@ -15,28 +15,51 @@
         android:textColor="#000" />
     <EditText
         android:inputType="textMultiLine"
-        android:layout_below="@id/txtEditItemName"
+        android:layout_below="@+id/txtEditItemName"
         android:id="@+id/txtEditItemDescription"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Item Description"
         android:paddingLeft="10dp"
         android:textColor="#000" />
-<!--Add ImageView-->
+    <ImageButton
+        android:id="@+id/imgUpload"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txtEditItemDescription"
+        android:src="@drawable/uploadimagedefault"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside" />
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtEditItemDescription"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/imgUpload"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="50dp">
         <Button
             android:id="@+id/btnAddItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/addItem"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="#BA66CD"
+            android:layout_centerHorizontal="true"
+            android:height="70dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="20dp" />
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnAddItem"
+            android:text="@string/cancel"
             android:layout_marginLeft="30dp"
             android:textSize="20sp"
             android:textStyle="bold"

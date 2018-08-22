@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="Search Items"
-        android:textColor="#000"
         android:layout_weight="5" />
     <ListView
         android:id="@+id/lvViewItems"

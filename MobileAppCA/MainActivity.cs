@@ -33,7 +33,7 @@ namespace MobileAppCA
         {
             //Look into more
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
-            DialogLend lendDialog = new DialogLend();
+            LendDialog lendDialog = new LendDialog();
             lendDialog.Show(transaction, "dialog fragment");
         }
 
