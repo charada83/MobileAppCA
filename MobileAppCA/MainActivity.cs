@@ -2,12 +2,18 @@
 using Android.Widget;
 using Android.OS;
 using Android.Content;
+using System.Collections.Generic;
 
 namespace MobileAppCA
 {
     [Activity(Label = "LocalLend", MainLauncher = true)]
     public class MainActivity : Activity
     {
+        //DrawerLayout navDrawer;
+        //List<string> leftNavDrawer = new List<string>();
+        //ArrayAdapter leftNavAdapter;
+        //ListView lvNavDrawer;
+
         TextView lblTitle;
         Button btnBorrow;
         Button btnLend;
@@ -34,7 +40,7 @@ namespace MobileAppCA
             //Look into more
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             LendDialog lendDialog = new LendDialog();
-            lendDialog.Show(transaction, "dialog fragment");
+            lendDialog.Show(transaction, "lendDialog fragment");
         }
 
         private void BtnBorrow_Click(object sender, System.EventArgs e)

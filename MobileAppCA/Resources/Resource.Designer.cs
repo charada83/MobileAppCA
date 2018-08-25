@@ -69,14 +69,17 @@ namespace MobileAppCA
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050011
-			public const int btnAddItem = 2131034129;
+			// aapt resource value: 0x7f050010
+			public const int Text = 2131034128;
+			
+			// aapt resource value: 0x7f050015
+			public const int btnAddItem = 2131034133;
 			
 			// aapt resource value: 0x7f050004
 			public const int btnBack = 2131034116;
 			
-			// aapt resource value: 0x7f050013
-			public const int btnBorrow = 2131034131;
+			// aapt resource value: 0x7f050017
+			public const int btnBorrow = 2131034135;
 			
 			// aapt resource value: 0x7f05000d
 			public const int btnCancel = 2131034125;
@@ -84,11 +87,17 @@ namespace MobileAppCA
 			// aapt resource value: 0x7f050003
 			public const int btnContactLender = 2131034115;
 			
-			// aapt resource value: 0x7f050014
-			public const int btnLend = 2131034132;
+			// aapt resource value: 0x7f050018
+			public const int btnLend = 2131034136;
 			
 			// aapt resource value: 0x7f05000c
 			public const int btnSendMessage = 2131034124;
+			
+			// aapt resource value: 0x7f05000f
+			public const int contentFrame = 2131034127;
+			
+			// aapt resource value: 0x7f05000e
+			public const int drawerNav = 2131034126;
 			
 			// aapt resource value: 0x7f050007
 			public const int imageViewBorrowItem = 2131034119;
@@ -96,8 +105,8 @@ namespace MobileAppCA
 			// aapt resource value: 0x7f050000
 			public const int imgItemPhoto = 2131034112;
 			
-			// aapt resource value: 0x7f050010
-			public const int imgUpload = 2131034128;
+			// aapt resource value: 0x7f050014
+			public const int imgUpload = 2131034132;
 			
 			// aapt resource value: 0x7f050009
 			public const int lblBorrowItemDescription = 2131034121;
@@ -111,17 +120,20 @@ namespace MobileAppCA
 			// aapt resource value: 0x7f050001
 			public const int lblItemName = 2131034113;
 			
-			// aapt resource value: 0x7f050012
-			public const int lblTitle = 2131034130;
+			// aapt resource value: 0x7f050016
+			public const int lblTitle = 2131034134;
+			
+			// aapt resource value: 0x7f050011
+			public const int lvDrawerNav = 2131034129;
 			
 			// aapt resource value: 0x7f050006
 			public const int lvViewItems = 2131034118;
 			
-			// aapt resource value: 0x7f05000f
-			public const int txtEditItemDescription = 2131034127;
+			// aapt resource value: 0x7f050013
+			public const int txtEditItemDescription = 2131034131;
 			
-			// aapt resource value: 0x7f05000e
-			public const int txtEditItemName = 2131034126;
+			// aapt resource value: 0x7f050012
+			public const int txtEditItemName = 2131034130;
 			
 			// aapt resource value: 0x7f05000a
 			public const int txtFullname = 2131034122;
@@ -158,10 +170,13 @@ namespace MobileAppCA
 			public const int ContactDialog = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int LendDialog = 2130903044;
+			public const int DrawerNavigation = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Main = 2130903045;
+			public const int LendDialog = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int Main = 2130903046;
 			
 			static Layout()
 			{

@@ -9,14 +9,26 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SQLite;
 
 namespace MobileAppCA
 {
+    [Table("Item")]
+
     class Item
     {
-        public string ItemName { get; }
-        public string ItemDescription { get; }
-        public int ImageDrawableID { get; }
+        [PrimaryKey, AutoIncrement]
+        public int ItemID { get; set; }
+
+        [MaxLength(25)]
+        public string ItemName { get; set; }
+
+        [MaxLength(140)]
+        public string ItemDescription { get; set; }
+        public int ImageDrawableID { get; set; }
+
+        public Item()
+        { }
 
         public Item(string itemName, string itemDescription, int imageID)
         {
