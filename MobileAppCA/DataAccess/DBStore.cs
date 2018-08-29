@@ -45,21 +45,21 @@ namespace MobileAppCA.DataAccess
         //            {
         //                Item item = new Item()
         //                {
-        //                    ItemName = 
-        //                    ItemDescription = 
-        //                    ImageDrawableID = 
+        //                    ItemName =
+        //                    ItemDescription =
+        //                    ImageDrawableID =
         //                };
 
         //                cxn.Insert(item);
         //            }
         //        }
         //    }
-        //catch (Exception ex)
-        //{
-        //    Console.WriteLine(ex.Message);
-        //    throw;
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //        throw;
+        //    }
         //}
-        // }
 
         public IEnumerable<Item> GetItems()
         {

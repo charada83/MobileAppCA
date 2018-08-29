@@ -29,7 +29,7 @@ namespace MobileAppCA
             txtSearch = FindViewById<EditText>(Resource.Id.txtSearch);
             lvItems = FindViewById<ListView>(Resource.Id.lvViewItems);
 
-            LoadAnimalsFromDataStore();
+            LoadItemsFromDataStore();
 
             txtSearch.TextChanged += TxtSearch_TextChanged;
 
@@ -63,7 +63,7 @@ namespace MobileAppCA
 
         }
 
-        private void LoadAnimalsFromDataStore()
+        private void LoadItemsFromDataStore()
         {
             itemList.Add(new Item("Power Drill", "Powerful Tool", Resource.Drawable.powerdrill));
             itemList.Add(new Item("Wheelbarrow", "Good condition, can lend for up to 3 days", Resource.Drawable.wheelbarrow));

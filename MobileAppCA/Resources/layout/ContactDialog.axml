@@ -11,8 +11,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
         android:hint="Firstname Surname"
-        android:paddingLeft="10dp"
-        android:textColor="#000" />
+        android:paddingLeft="10dp" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_below="@+id/txtFullname"
@@ -23,8 +22,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Your Message"
-        android:paddingLeft="10dp"
-        android:textColor="#000" />
+        android:paddingLeft="10dp" />
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
