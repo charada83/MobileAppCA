@@ -46,7 +46,6 @@ namespace MobileAppCA
 
             btnContactLender.Click += BtnContactLender_Click;
             btnBackToList.Click += BtnBackToList_Click;
-            
         }
 
         private void BtnBackToList_Click(object sender, EventArgs e)

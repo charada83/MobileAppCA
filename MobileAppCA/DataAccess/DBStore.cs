@@ -27,39 +27,108 @@ namespace MobileAppCA.DataAccess
                 DBLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),
                                                                     "LocalLendDB.db3");
 
-                //InitialiseDB();
+                InitialiseDB();
             }
         }
 
-        //private static void InitialiseDB()
-        //{
-        //    try
-        //    {
-        //        using (SQLiteConnection cxn = new SQLiteConnection(DBLocation))
-        //        {
-        //            cxn.DropTable<Item>();
+        private static void InitialiseDB()
+        {
+            try
+            {
+                using (SQLiteConnection cxn = new SQLiteConnection(DBLocation))
+                {
+                    cxn.DropTable<Item>();
 
-        //            cxn.CreateTable<Item>();
-        //            TableQuery<Item> query = cxn.Table<Item>();
-        //            if (query.Count() == 0)
-        //            {
-        //                Item item = new Item()
-        //                {
-        //                    ItemName =
-        //                    ItemDescription =
-        //                    ImageDrawableID =
-        //                };
+                    cxn.CreateTable<Item>();
+                    //TableQuery<Item> query = cxn.Table<Item>();
+                    //if (query.Count() == 0)
+                    //{
+                    //    Item item = new Item()
+                    //    {
+                    //        ItemName =
+                    //        ItemDescription =
+                    //        ImageDrawableID =
+                    //    };
 
-        //                cxn.Insert(item);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine(ex.Message);
-        //        throw;
-        //    }
-        //}
+                    //    cxn.Insert(item);
+                    //}
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
+        public void InsertIntoTableItem(Item item)
+        {
+            try
+            {
+                using (SQLiteConnection cxn = new SQLiteConnection(DBStore.DBLocation))
+                {
+                    cxn.Insert(item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
+        public List<Item> SelectItemTable ()
+        {
+            try
+            {
+                using (SQLiteConnection cxn = new SQLiteConnection(DBStore.DBLocation))
+                {
+                    return cxn.Table<Item>().ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
+        public void UpdateItemTable(Item item)
+        {
+            try
+            {
+                using (SQLiteConnection cxn = new SQLiteConnection(DBStore.DBLocation))
+                {
+                    cxn.Query<Item>("UPDATE Item SET ItemName=?, ItemDescription=?, ImagedrawableID=? " +
+                        "WHERE ItemID=?", item.ItemName, item.ItemDescription, item.ImageDrawableID, item.ItemID);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
+        public void DeleteTableItem(Item item)
+        {
+            try
+            {
+                using (SQLiteConnection cxn = new SQLiteConnection(DBStore.DBLocation))
+                {
+                    cxn.Delete(item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
 
         public IEnumerable<Item> GetItems()
         {

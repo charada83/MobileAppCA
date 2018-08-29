@@ -34,7 +34,6 @@ namespace MobileAppCA
             btnBorrow.Click += BtnBorrow_Click;
             btnLend.Click += BtnLend_Click;
 
-
         }
 
         private void BtnLend_Click(object sender, System.EventArgs e)

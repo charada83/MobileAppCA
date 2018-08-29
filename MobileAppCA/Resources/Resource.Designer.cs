@@ -73,13 +73,16 @@ namespace MobileAppCA
 			public const int Text = 2131099664;
 			
 			// aapt resource value: 0x7f060015
-			public const int btnAddItem = 2131099669;
+			public const int btnAddImage = 2131099669;
+			
+			// aapt resource value: 0x7f060016
+			public const int btnAddItem = 2131099670;
 			
 			// aapt resource value: 0x7f060004
 			public const int btnBack = 2131099652;
 			
-			// aapt resource value: 0x7f060017
-			public const int btnBorrow = 2131099671;
+			// aapt resource value: 0x7f060018
+			public const int btnBorrow = 2131099672;
 			
 			// aapt resource value: 0x7f06000d
 			public const int btnCancel = 2131099661;
@@ -87,8 +90,8 @@ namespace MobileAppCA
 			// aapt resource value: 0x7f060003
 			public const int btnContactLender = 2131099651;
 			
-			// aapt resource value: 0x7f060018
-			public const int btnLend = 2131099672;
+			// aapt resource value: 0x7f060019
+			public const int btnLend = 2131099673;
 			
 			// aapt resource value: 0x7f06000c
 			public const int btnSendMessage = 2131099660;
@@ -120,8 +123,8 @@ namespace MobileAppCA
 			// aapt resource value: 0x7f060001
 			public const int lblItemName = 2131099649;
 			
-			// aapt resource value: 0x7f060016
-			public const int lblTitle = 2131099670;
+			// aapt resource value: 0x7f060017
+			public const int lblTitle = 2131099671;
 			
 			// aapt resource value: 0x7f060011
 			public const int lvDrawerNav = 2131099665;
@@ -191,29 +194,38 @@ namespace MobileAppCA
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f04000b
+			public const int addImage = 2130968587;
+			
 			// aapt resource value: 0x7f040004
 			public const int addItem = 2130968580;
 			
 			// aapt resource value: 0x7f040000
 			public const int app_name = 2130968576;
 			
-			// aapt resource value: 0x7f040008
-			public const int backToList = 2130968584;
+			// aapt resource value: 0x7f04000a
+			public const int backToList = 2130968586;
 			
 			// aapt resource value: 0x7f040002
 			public const int borrow = 2130968578;
 			
+			// aapt resource value: 0x7f040009
+			public const int cancel = 2130968585;
+			
 			// aapt resource value: 0x7f040007
-			public const int cancel = 2130968583;
+			public const int contactLender = 2130968583;
+			
+			// aapt resource value: 0x7f040006
+			public const int deleteItem = 2130968582;
 			
 			// aapt resource value: 0x7f040005
-			public const int contactLender = 2130968581;
+			public const int editItem = 2130968581;
 			
 			// aapt resource value: 0x7f040003
 			public const int lend = 2130968579;
 			
-			// aapt resource value: 0x7f040006
-			public const int sendMessage = 2130968582;
+			// aapt resource value: 0x7f040008
+			public const int sendMessage = 2130968584;
 			
 			// aapt resource value: 0x7f040001
 			public const int title = 2130968577;

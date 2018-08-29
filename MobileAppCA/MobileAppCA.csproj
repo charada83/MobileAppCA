@@ -59,10 +59,10 @@
     <Compile Include="BorrowListActivity.cs" />
     <Compile Include="ContactDialog.cs" />
     <Compile Include="DataAccess\DBStore.cs" />
-    <Compile Include="LendDialog.cs" />
     <Compile Include="DataAccess\Item.cs" />
     <Compile Include="Adapters\ItemAdapter.cs" />
     <Compile Include="Adapters\ItemAdapterViewHolder.cs" />
+    <Compile Include="LendDialog.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,11 +106,6 @@
     <AndroidResource Include="Resources\drawable\wheelbarrow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\LendDialog.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\BorrowItemDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -133,6 +128,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\borrowlendbuttonstyles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\LendDialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
