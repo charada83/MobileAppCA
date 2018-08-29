@@ -11,8 +11,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
         android:hint="Item Name"
-        android:paddingLeft="10dp"
-        android:textColor="#000" />
+        android:paddingLeft="10dp" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_below="@+id/txtEditItemName"
@@ -23,8 +22,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Item Description"
-        android:paddingLeft="10dp"
-        android:textColor="#000" />
+        android:paddingLeft="10dp" />
     <ImageButton
         android:id="@+id/imgUpload"
         android:layout_width="match_parent"

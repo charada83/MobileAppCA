@@ -5,6 +5,8 @@
   <string name="borrow">Borrow</string>
   <string name="lend">Lend</string>
   <string name="addItem">Add Item</string>
+  <string name="editItem">Edit Item</string>
+  <string name="deleteItem">Delete Item</string>
   <string name="contactLender">Contact Lender</string>
   <string name="sendMessage">Send Message</string>
   <string name="cancel">Cancel</string>

@@ -17,7 +17,7 @@ namespace MobileAppCA
     class LendDialog : DialogFragment
     {
 
-        DBStore dbStore = new DBStore();
+        DBStore database = new DBStore();
 
         private EditText txtEditItemName;
         private EditText txtEditItemDescription;
@@ -66,6 +66,16 @@ namespace MobileAppCA
 
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
+            Item item = new Item()
+            {
+                ItemName = txtEditItemName.Text,
+                ItemDescription = txtEditItemDescription.Text,
+                //ImageDrawableID = imgUpload;
+            };
+
+            database.InsertIntoTableItem(item);
+
+
             //Byte[] newImage = imgUpload.ToArray<Byte>();
             //Item item = new Item()
             //{ItemName = txtEditItemName.Text, ItemDescription = txtEditItemDescription.Text, ImageDrawableID = newImage };

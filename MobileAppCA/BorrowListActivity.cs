@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MobileAppCA.DataAccess;
 
 namespace MobileAppCA
 {
@@ -19,6 +20,8 @@ namespace MobileAppCA
         EditText txtSearch;
         ListView lvItems;
         List<Item> itemList = new List<Item>();
+        DBStore database = new DBStore();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -65,8 +68,9 @@ namespace MobileAppCA
 
         private void LoadItemsFromDataStore()
         {
-            itemList.Add(new Item("Power Drill", "Powerful Tool", Resource.Drawable.powerdrill));
-            itemList.Add(new Item("Wheelbarrow", "Good condition, can lend for up to 3 days", Resource.Drawable.wheelbarrow));
+            itemList = database.SelectItemTable(); 
+            //itemList.Add(new Item("Power Drill", "Powerful Tool", Resource.Drawable.powerdrill));
+            //itemList.Add(new Item("Wheelbarrow", "Good condition, can lend for up to 3 days", Resource.Drawable.wheelbarrow));
         }
     }
 }

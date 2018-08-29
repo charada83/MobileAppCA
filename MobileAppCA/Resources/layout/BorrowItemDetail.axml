@@ -4,6 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="2">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <Button
+            android:text="@string/editItem"
+            android:id="@+id/btnEditItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <Button
+            android:text="@string/deleteItem"
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
     <ImageView
         android:id="@+id/imgItemPhoto"
         android:layout_width="match_parent"
