@@ -10,11 +10,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MobileAppCA.DataAccess;
 
 namespace MobileAppCA
 {
     class LendDialog : DialogFragment
     {
+
+        DBStore database = new DBStore();
+
         private EditText txtEditItemName;
         private EditText txtEditItemDescription;
         private ImageButton imgUpload;
@@ -51,7 +55,7 @@ namespace MobileAppCA
             if ((requestCode == 200) && (resultCode == Result.Ok))
             {
                 Android.Net.Uri selectedImage = data.Data;
-                imgUpload.SetImageURI(selectedImage);
+                imgUpload.SetImageURI(selectedImage);   
             }  
         }
 
@@ -62,6 +66,20 @@ namespace MobileAppCA
 
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
+            Item item = new Item()
+            {
+                ItemName = txtEditItemName.Text,
+                ItemDescription = txtEditItemDescription.Text,
+                //ImageDrawableID = imgUpload;
+            };
+
+            database.InsertIntoTableItem(item);
+
+
+            //Byte[] newImage = imgUpload.ToArray<Byte>();
+            //Item item = new Item()
+            //{ItemName = txtEditItemName.Text, ItemDescription = txtEditItemDescription.Text, ImageDrawableID = newImage };
+
             //Intent addToBorrowList = new Intent(this, typeof(BorrowListActivity));
             //addToBorrowList.PutExtra("txtName", txtEditItemName.Text);
             //StartActivityForResult(addToBorrowList, 100);
