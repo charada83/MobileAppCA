@@ -4,7 +4,6 @@ using Android.OS;
 using Android.Content;
 using System.Collections.Generic;
 
-
 namespace MobileAppCA
 {
     [Activity(Label = "LocalLend", MainLauncher = true)]
@@ -14,7 +13,6 @@ namespace MobileAppCA
         //List<string> leftNavDrawer = new List<string>();
         //ArrayAdapter leftNavAdapter;
         //ListView lvNavDrawer;
-        
 
         TextView lblTitle;
         Button btnBorrow;

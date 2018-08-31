@@ -35,7 +35,7 @@ namespace MobileAppCA
             lvItems = FindViewById<ListView>(Resource.Id.lvViewItems);
             //btnDeleteItem = FindViewById<Button>(Resource.Id.btnDeleteItem);
 
-            LoadItemsFromDataStore();
+            LoadAnimalsFromDataStore();
 
             txtSearch.TextChanged += TxtSearch_TextChanged;
 
@@ -81,7 +81,7 @@ namespace MobileAppCA
 
         }
 
-        private void LoadItemsFromDataStore()
+        private void LoadAnimalsFromDataStore()
         {
             itemList = database.SelectItemTable();
             
