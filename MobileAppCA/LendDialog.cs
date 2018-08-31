@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -7,63 +8,70 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using MobileAppCA.DataAccess;
 
 namespace MobileAppCA
 {
-    public class LendDialog : DialogFragment
+    class LendDialog : DialogFragment
     {
-        DBStore database = new DBStore();
-
         private EditText txtEditItemName;
         private EditText txtEditItemDescription;
-        private ImageView imgUpload;
-        private Button btnAddImage;
+        private ImageButton imgUpload;
         private Button btnAddItem;
         private Button btnCancel;
 
-        public override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
-        }
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-            base. OnCreateView(inflater, container, savedInstanceState);
+            base.OnCreateView(inflater, container, savedInstanceState);
 
             var lendView = inflater.Inflate(Resource.Layout.LendDialog, container, false);
 
             txtEditItemName = lendView.FindViewById<EditText>(Resource.Id.txtEditItemName);
             txtEditItemDescription = lendView.FindViewById<EditText>(Resource.Id.txtEditItemDescription);
-            imgUpload = lendView.FindViewById<ImageView>(Resource.Id.imgUpload);
-            btnAddImage = lendView.FindViewById<Button>(Resource.Id.btnAddImage);
+            imgUpload = lendView.FindViewById<ImageButton>(Resource.Id.imgUpload);
             btnAddItem = lendView.FindViewById<Button>(Resource.Id.btnAddItem);
             btnCancel = lendView.FindViewById<Button>(Resource.Id.btnCancel);
 
             btnAddItem.Click += BtnAddItem_Click;
-
+            btnCancel.Click += BtnCancel_Click;
+            imgUpload.Click += ImgUpload_Click;
             return lendView;
+        }
 
+        private void ImgUpload_Click(object sender, EventArgs e)
+        {
+            Intent uploadImageIntent = new Intent(Intent.ActionPick, Android.Provider.MediaStore.Images.Media.ExternalContentUri);
+            StartActivityForResult(uploadImageIntent, 200);
+            
+        }
+
+        public override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            if ((requestCode == 200) && (resultCode == Result.Ok))
+            {
+                Android.Net.Uri selectedImage = data.Data;
+                imgUpload.SetImageURI(selectedImage);
+            }  
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Dismiss();
         }
 
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
-            Item item = new Item()
-            {
-                ItemName = txtEditItemName.Text,
-                ItemDescription = txtEditItemDescription.Text          
-            };
+            //Intent addToBorrowList = new Intent(this, typeof(BorrowListActivity));
+            //addToBorrowList.PutExtra("txtName", txtEditItemName.Text);
+            //StartActivityForResult(addToBorrowList, 100);
+        }
 
-            database.InsertIntoTableItem(item);
-            //Toast.MakeText(Activity, "You item has been added", ToastLength.Long).Show();
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+            Dialog.Window.RequestFeature(WindowFeatures.NoTitle);
+            base.OnActivityCreated(savedInstanceState);
+            
         }
     }
 }
