@@ -19,6 +19,7 @@ namespace MobileAppCA
         private EditText txtMessage;
         private Button btnSendMessage;
         private Button btnCancel;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
